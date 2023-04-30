@@ -15,25 +15,25 @@ import {
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'This is a brief description of Project 1.',
+    title: 'NC News',
+    description: 'NC News is a web application built with React, Chakra UI, and Vite. The app allows users to browse and interact with articles and comments.<br /> <ul><li>View a list of articles</li><li>View a list of articles by topic</li><li>View an individual article</li><li>View an individual article\'s comments</li><li>Sort articles by date, comment_count, or votes</li><li>Post a new comment to an existing article (as a default user)</li></ul>',
     image: 'https://jdwd40.com/wp-content/uploads/2023/04/sabri-tuzcu-wunVFNvqhfE-unsplash.jpg',
     liveLink: 'https://project1-live-link.com',
-    githubLink: 'https://github.com/username/project1',
+    githubLink: 'https://github.com/jdwd40/fe-vite-nc-news',
   },
   {
-    title: 'Project 2',
-    description: 'This is a brief description of Project 2.',
+    title: 'Cypto Tracker',
+    description: 'This application provides an easy way to track the current prices of popular cryptocurrencies and stay updated with the latest news articles related to crypto. Features include:<br /> <ul><li>View a list of the top 100 cryptocurrencies by market cap</li><li>View an individual cryptocurrency</li><li>View the latest news articles related to cryptocurrency</li><li>View an individual news article</li>',
     image: 'https://jdwd40.com/wp-content/uploads/2023/04/orbtal-media-1td5Iq5IvNc-unsplash.jpg',
-    liveLink: 'https://project2-live-link.com',
-    githubLink: 'https://github.com/username/project2',
+    liveLink: 'https://jdc1.xyz',
+    githubLink: 'https://github.com/jdwd40/cryptoapp',
   },
   {
-    title: 'Project 3',
-    description: 'This is a brief description of Project 3.',
+    title: 'Untitled Notes',
+    description: 'This application provides an easy way to track the current prices of popular cryptocurrencies and stay updated with the latest news articles related to crypto. Features include:<br /> <ul><li>View a list of the top 100 cryptocurrencies by market cap</li><li>View an individual cryptocurrency</li><li>View the latest news articles related to cryptocurrency</li><li>View an individual news article</li>',
     image: 'https://jdwd40.com/wp-content/uploads/2023/04/markus-petritz-LFe6Prglw4-unsplash.jpg',
     liveLink: 'https://project3-live-link.com',
-    githubLink: 'https://github.com/username/project3',
+    githubLink: 'https://github.com/jdwd40/untitled-notes',
   },
 ];
 
@@ -70,26 +70,20 @@ const ProjectsPage = () => {
                 <Heading as="h2" size="md">
                   {project.title}
                 </Heading>
-                <Text>{project.description}</Text>
+                 <Text
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                />
                 <Flex mt="auto" justifyContent="space-between" width="100%">
-                  <Button
-                    as={Link}
-                    href={project.liveLink}
-                    isExternal
-                    size="sm"
-                    variant="outline"
-                  >
-                    View Live
-                  </Button>
-                  <Button
-                    as={Link}
-                    href={project.githubLink}
-                    isExternal
-                    size="sm"
-                    variant="outline"
-                  >
-                    GitHub
-                  </Button>
+                  <Link href={project.liveLink} isExternal>
+                    <Button size="sm" variant="outline" colorScheme="blue" buttonBg="blue" buttonColor={buttonColor}>
+                      View Live
+                    </Button>
+                  </Link>
+                  <Link href={project.githubLink} isExternal>
+                    <Button size="sm" colorScheme="blue" variant="outline" buttonBg="blue" buttonColor={buttonColor}>
+                      GitHub
+                    </Button>
+                  </Link>
                 </Flex>
               </VStack>
             </Box>
