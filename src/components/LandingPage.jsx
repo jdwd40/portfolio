@@ -45,16 +45,16 @@ const LandingPage = () => {
           </Heading>
           <Flex
             direction={{ base: 'column', md: 'row' }}
-            alignItems="center"
-            justifyContent="center"
+            alignItems={{ base: 'center', md: 'flex-start' }}
+            justifyContent={{ base: 'center', md: 'space-between' }}
             spacing={{ base: '6', md: '10' }}
             width="100%"
           >
             <Box>
               <Image
-                src="https://jdwd40.com/wp-content/uploads/2023/05/full_jd_2023.jpg"
+                src="https://jdwd40.com/wp-content/uploads/2023/05/jd2023.jpg"
                 alt="Profile picture"
-                width={{ base: '250px', md: '550px' }}
+                width={{ base: '250px', md: '250px', lg: '250px' }}
                 mb={{ base: '4', md: '0' }}
                 borderRadius="full"
                 borderWidth="2px"
@@ -62,7 +62,12 @@ const LandingPage = () => {
                 shadow="lg"
               />
             </Box>
-            <Text fontSize="md" color={darkGreen} fontWeight={800}>
+            <Text
+              fontSize="md"
+              color={darkGreen}
+              fontWeight={800}
+              maxWidth={{ base: '100%', md: '45%', lg: '55%' }}
+            >
               Hello! I'm John Driscoll, a junior web developer eager to
               kickstart my career in the tech industry. With a strong foundation
               in React, Node.js, Express, and Python, I am well-prepared to
@@ -78,7 +83,7 @@ const LandingPage = () => {
             to="/projects"
             bg={buttonBg}
             color={buttonColor}
-            size="lg"
+            size="md"
             _hover={{
               bg: 'blue.200',
               color: 'white',

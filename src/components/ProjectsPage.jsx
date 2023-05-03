@@ -62,6 +62,7 @@ const ProjectsPage = () => {
           {projects.map((project, index) => (
             <Box
               key={index}
+              width="100%"
               maxW="md"
               borderWidth="1px"
               borderRadius="lg"

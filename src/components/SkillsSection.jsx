@@ -75,6 +75,7 @@ const SkillsSection = () => {
                     <Box
                         key={idx}
                         maxW="md"
+                        width="100%"
                         minHeight={{ base: 'auto', sm: '420px' }}
                         borderWidth="1px"
                         borderRadius="lg"
