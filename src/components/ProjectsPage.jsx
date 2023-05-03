@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: 'Untitled Notes',
-    description: 'This application provides an easy way to track the current prices of popular cryptocurrencies and stay updated with the latest news articles related to crypto. Features include:<br /> <ul><li>View a list of the top 100 cryptocurrencies by market cap</li><li>View an individual cryptocurrency</li><li>View the latest news articles related to cryptocurrency</li><li>View an individual news article</li>',
+    description: 'Untitled Notes features a realtime markdown editor with a multitude of features within; including live collaboration sessions with friends utilising WebRTC and YJS. This application was built during the last three weeks of the Northcoders bootcamp. It was built in Nextjs, with Firebase as a backend and TypeScript as the main language. We decided to use eslint, prettier, and Husky to enforce a style guide with pre-commit hooks. Features include:<br /> <ul><li>Realtime markdown editor</li><li>Live collaboration sessions with friends</li><li>Shareable links to your notes</li><li>Dark mode</li><li>Responsive design</li></ul>',
     image: 'https://jdwd40.com/wp-content/uploads/2023/05/splashscreen.png',
     liveLink: 'https://untitled-notes.vercel.app/',
     githubLink: 'https://github.com/jdwd40/untitled-notes',
