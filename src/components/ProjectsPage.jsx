@@ -31,7 +31,7 @@ const projects = [
   {
     title: 'Untitled Notes',
     description: 'This application provides an easy way to track the current prices of popular cryptocurrencies and stay updated with the latest news articles related to crypto. Features include:<br /> <ul><li>View a list of the top 100 cryptocurrencies by market cap</li><li>View an individual cryptocurrency</li><li>View the latest news articles related to cryptocurrency</li><li>View an individual news article</li>',
-    image: 'https://jdwd40.com/wp-content/uploads/2023/04/markus-petritz-LFe6Prglw4-unsplash.jpg',
+    image: 'https://jdwd40.com/wp-content/uploads/2023/05/splashscreen.png',
     liveLink: 'https://untitled-notes.vercel.app/',
     githubLink: 'https://github.com/jdwd40/untitled-notes',
   },
