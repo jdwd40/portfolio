@@ -40,7 +40,7 @@ const LandingPage = () => {
           width={{ base: '100%', lg: '50%' }}
           mb={{ base: '4', lg: '0' }}
         >
-          <Heading as="h1" size="3xl" sx={textGradientStyle} color="white">
+          <Heading as="h1" fontSize="6xl" sx={textGradientStyle} color="white">
             About Me
           </Heading>
           <Flex

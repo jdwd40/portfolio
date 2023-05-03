@@ -42,6 +42,7 @@ const SkillsSection = () => {
             title: 'Backend Development',
             skills: [
                 { icon: FaNodeJs, text: 'Node.js & Express.js', desc: 'Developing scalable and efficient server-side applications' },
+                { icon: FaServer, text: 'RESTful APIs', desc: 'Creating and integrating powerful, user-friendly web services' },
                 { icon: FaPython, text: 'Python', desc: 'Automating tasks and building powerful web applications' },
                 { icon: FaDatabase, text: 'PostgreSQL & SQL', desc: 'Designing and managing robust relational databases' },
                 { icon: FaAws, text: 'Netlify, Vercel, & AWS', desc: 'Deploying and maintaining high-performance websites' },
@@ -50,11 +51,10 @@ const SkillsSection = () => {
         {
             title: 'Other Skills',
             skills: [
-                { icon: FaServer, text: 'RESTful APIs', desc: 'Creating and integrating powerful, user-friendly web services' },
                 { icon: FaLinux, text: 'Linux & VPS Management', desc: 'Configuring and maintaining secure, reliable servers' },
                 { icon: FaNetworkWired, text: 'Networking Fundamentals', desc: 'Understanding core networking concepts and protocols' },
-                { icon: FaWindows, text: 'Windows', desc: 'Proficient in managing and troubleshooting popular OS environments' },
-                { icon: FaLinux, text: 'Linux', desc: 'Proficient in managing and troubleshooting popular OS environments' },
+                { icon: FaWindows, text: 'Windows', desc: 'Proficient in managing and troubleshooting in Microsoft Windows Server environments' },
+                ,
             ],
         },
     ];
@@ -91,7 +91,9 @@ const SkillsSection = () => {
                         </Heading>
                         <VStack spacing="4" alignItems="center">
                             {skillGroup.skills.map((skill, index) => (
-                                <Flex key={index} direction="column" alignItems="center" mb="4">
+                                <Flex key={index} direction="column" alignItems="center" mb="4"
+                                textAlign='center'
+                                >
                                     <skill.icon size="2em" />
                                     <Text color='white' mt="2">{skill.text}</Text>
                                     <Text fontSize="sm">{skill.desc}</Text>
