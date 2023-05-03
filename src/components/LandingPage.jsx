@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
   const bg = useColorModeValue('tech.lightBlue', 'tech.lightBlue');
   const color = useColorModeValue('tech.brightBlue', 'tech.brightBlue');
-  const buttonBg = useColorModeValue('tech.brightBlue', 'tech.brightBlue');
+  const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
   const buttonColor = useColorModeValue('tech.white', 'tech.white');
   const textGradientStyle = useStyleConfig('TextGradient');
 

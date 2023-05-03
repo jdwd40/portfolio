@@ -3,9 +3,11 @@ import { extendTheme } from '@chakra-ui/react';
 const theme = extendTheme({
   colors: {
     tech: {
-      lightBlue: '#E9F1FA',
-      brightBlue: '#00ABE4',
+      lightBlue: '#172d13',
+      brightBlue: '#FFFFFF',
       white: '#FFFFFF',
+      orange: '#d76f30',
+      lightGreen: '#6bb77b'
     },
   },
   fonts: {

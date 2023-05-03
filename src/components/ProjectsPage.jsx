@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'Cypto Tracker',
     description: 'This application provides an easy way to track the current prices of popular cryptocurrencies and stay updated with the latest news articles related to crypto. Features include:<br /> <ul><li>View a list of the top 100 cryptocurrencies by market cap</li><li>View an individual cryptocurrency</li><li>View the latest news articles related to cryptocurrency</li><li>View an individual news article</li>',
-    image: 'https://jdwd40.com/wp-content/uploads/2023/04/orbtal-media-1td5Iq5IvNc-unsplash.jpg',
+    image: 'https://jdwd40.com/wp-content/uploads/2023/05/screenshot.png',
     liveLink: 'https://jdc1.xyz',
     githubLink: 'https://github.com/jdwd40/cryptoapp',
   },
@@ -32,7 +32,7 @@ const projects = [
     title: 'Untitled Notes',
     description: 'This application provides an easy way to track the current prices of popular cryptocurrencies and stay updated with the latest news articles related to crypto. Features include:<br /> <ul><li>View a list of the top 100 cryptocurrencies by market cap</li><li>View an individual cryptocurrency</li><li>View the latest news articles related to cryptocurrency</li><li>View an individual news article</li>',
     image: 'https://jdwd40.com/wp-content/uploads/2023/04/markus-petritz-LFe6Prglw4-unsplash.jpg',
-    liveLink: 'https://project3-live-link.com',
+    liveLink: 'https://untitled-notes.vercel.app/',
     githubLink: 'https://github.com/jdwd40/untitled-notes',
   },
 ];
@@ -40,9 +40,10 @@ const projects = [
 const ProjectsPage = () => {
   const bg = useColorModeValue('tech.lightBlue', 'tech.lightBlue');
   const color = useColorModeValue('tech.brightBlue', 'tech.brightBlue');
-  const buttonBg = useColorModeValue('tech.brightBlue', 'tech.brightBlue');
+  const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
   const buttonColor = useColorModeValue('tech.white', 'tech.white');
   const textGradientStyle = useStyleConfig("TextGradient");
+  const cardBg = useColorModeValue('tech.lightGreen', 'tech.LightGreen');
 
   return (
     <Box
@@ -64,23 +65,30 @@ const ProjectsPage = () => {
               borderWidth="1px"
               borderRadius="lg"
               overflow="hidden"
+              padding="4"
             >
-              <Image src={project.image} alt={project.title} />
+              <Image src={project.image}
+                alt={project.title}
+                borderRadius="2%"
+                width="100%"
+                height="200px"
+                objectFit="cover" />
               <VStack p="6" spacing="4" alignItems="start">
                 <Heading as="h2" size="md">
                   {project.title}
                 </Heading>
-                 <Text
+                <Text
                   dangerouslySetInnerHTML={{ __html: project.description }}
                 />
                 <Flex mt="auto" justifyContent="space-between" width="100%">
                   <Link href={project.liveLink} isExternal>
-                    <Button size="sm" variant="outline" colorScheme="blue" buttonBg="blue" buttonColor={buttonColor}>
+                    <Button size="sm" bg={buttonBg}
+                      color={buttonColor}>
                       View Live
                     </Button>
                   </Link>
                   <Link href={project.githubLink} isExternal>
-                    <Button size="sm" colorScheme="blue" variant="outline" buttonBg="blue" buttonColor={buttonColor}>
+                    <Button size="sm" variant="outline" buttonBg="blue" buttonColor={buttonColor}>
                       GitHub
                     </Button>
                   </Link>
