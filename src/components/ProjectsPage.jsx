@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: 'Untitled Notes',
-    description: 'Untitled Notes features a realtime markdown editor with a multitude of features within; including live collaboration sessions with friends utilising WebRTC and YJS. This application was built during the last three weeks of the Northcoders bootcamp. It was built in Nextjs, with Firebase as a backend and TypeScript as the main language. Features include:<br /> <ul><li>Realtime markdown editor</li><li>Live collaboration sessions with friends</li><li>Shareable links to your notes</li><li>Dark mode</li><li>Responsive design</li></ul>',
+    description: 'Untitled Notes is a realtime markdown editor. This application was built during the last three weeks of the Northcoders bootcamp. It was built in Nextjs, with Firebase as a backend and TypeScript as the main language. Features include:<br /> <ul><li>Realtime markdown editor</li><li>Live collaboration sessions with friends</li><li>Responsive design</li></ul>',
     image: 'https://jdwd40.com/wp-content/uploads/2023/05/splashscreen.png',
     liveLink: 'https://untitled-notes.vercel.app/',
     githubLink: 'https://github.com/jdwd40/untitled-notes',
