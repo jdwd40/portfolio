@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <Box as="footer" bg={bg} color={color} py="6" px={{ base: '4', md: '8' }}>
-        <Heading as="h1" size="m" mb="4">
+        <Heading color='white' as="h1" size="m" mb="4">
             My Tech Stack
         </Heading>
       <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} spacing="4">

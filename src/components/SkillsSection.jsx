@@ -68,13 +68,14 @@ const SkillsSection = () => {
             <Flex
                 direction={{ base: 'column', sm: 'row' }}
                 justifyContent="center"
-                alignItems="center"
+                alignItems="top"
                 flexWrap="wrap"
             >
                 {skillsList.map((skillGroup, idx) => (
                     <Box
                         key={idx}
                         maxW="md"
+                        minHeight={{ base: 'auto', sm: '420px' }}
                         borderWidth="1px"
                         borderRadius="lg"
                         borderColor={cardColor}
@@ -85,14 +86,14 @@ const SkillsSection = () => {
                         mb="4" // Change the margin bottom value from "4" to "2"
                         mr={{ base: '0', sm: '4' }}
                     >
-                        <Heading as="h3" size="lg" mb="4" textAlign="center" color='white' sx={textGradientStyle}>
+                        <Heading as="h3" size="lg" mb="4" textAlign="center" color={cardColor} sx={textGradientStyle}>
                             {skillGroup.title}
                         </Heading>
                         <VStack spacing="4" alignItems="center">
                             {skillGroup.skills.map((skill, index) => (
                                 <Flex key={index} direction="column" alignItems="center" mb="4">
                                     <skill.icon size="2em" />
-                                    <Text mt="2">{skill.text}</Text>
+                                    <Text color='white' mt="2">{skill.text}</Text>
                                     <Text fontSize="sm">{skill.desc}</Text>
                                 </Flex>
                             ))}

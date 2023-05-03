@@ -78,7 +78,7 @@ const ProjectsPage = () => {
                 height="200px"
                 objectFit="cover" />
               <VStack p="6" spacing="4" alignItems="start">
-                <Heading as="h2" size="md" color='white' sx={textGradientStyle}>
+                <Heading as="h2" size="md" color={cardColor} sx={textGradientStyle}>
                   {project.title}
                 </Heading>
                 <Text

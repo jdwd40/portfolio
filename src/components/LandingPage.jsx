@@ -13,11 +13,15 @@ import {
 import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
-  const bg = useColorModeValue('linear(to-br, tech.lightBlue, tech.lightGreen)', 'linear(to-br, tech.lightBlue, tech.lightGreen)');
+  const bg = useColorModeValue(
+    'linear(to-br, tech.lightBlue, tech.lightGreen)',
+    'linear(to-br, tech.lightBlue, tech.lightGreen)'
+  );
   const color = useColorModeValue('tech.white', 'tech.white');
   const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
   const buttonColor = useColorModeValue('tech.white', 'tech.white');
   const textGradientStyle = useStyleConfig('TextGradient');
+  const darkGreen = useColorModeValue('tech.darkGreen', 'tech.darkGreen');
 
   return (
     <>
@@ -36,25 +40,39 @@ const LandingPage = () => {
           width={{ base: '100%', lg: '50%' }}
           mb={{ base: '4', lg: '0' }}
         >
-          <Heading as="h1" size="3xl" sx={textGradientStyle} color='white'>
-            John Driscoll's Portfolio
+          <Heading as="h1" size="3xl" sx={textGradientStyle} color="white">
+            About Me
           </Heading>
-          <Image
-            src="https://jdwd40.com/wp-content/uploads/2023/04/sean-lim-igeKyWQpCY0-unsplash.jpg"
-            alt="Landing page"
-            maxWidth="100%"
-            width={{ base: '90%', md: '70%', lg: '100%', xl: '80%' }}
-            mb="4"
-            borderRadius="2%"
-            borderWidth="2px"
-            borderColor={useColorModeValue('gray.300', 'gray.700')}
-            shadow="lg"
-          />
-          
-          <Text fontSize="xl" color='white'>
-          Hello! I'm John Driscoll, a junior web developer seeking my initial role in the tech industry. I possess a solid foundation in React, Node.js, Express, and Python, and I am eager to apply these skills to web development projects. My prior experience as a bar supervisor and warehouse team leader has equipped me with excellent interpersonal and leadership capabilities. If you are in search of a dedicated and passionate developer to contribute to your team, I am the ideal candidate.
-          </Text>
-          
+          <Flex
+            direction={{ base: 'column', md: 'row' }}
+            alignItems="center"
+            justifyContent="center"
+            spacing={{ base: '6', md: '10' }}
+            width="100%"
+          >
+            <Box>
+              <Image
+                src="https://jdwd40.com/wp-content/uploads/2023/05/full_jd_2023.jpg"
+                alt="Profile picture"
+                width={{ base: '250px', md: '550px' }}
+                mb={{ base: '4', md: '0' }}
+                borderRadius="full"
+                borderWidth="2px"
+                borderColor={useColorModeValue('gray.300', 'gray.700')}
+                shadow="lg"
+              />
+            </Box>
+            <Text fontSize="md" color={darkGreen} fontWeight={800}>
+              Hello! I'm John Driscoll, a junior web developer eager to
+              kickstart my career in the tech industry. With a strong foundation
+              in React, Node.js, Express, and Python, I am well-prepared to
+              contribute to diverse web development projects. My ability to
+              learn quickly and adapt to new technologies, alongside my
+              dedication to writing clean, efficient code, makes me an excellent
+              candidate for any team looking for a passionate and committed
+              developer to join their ranks.
+            </Text>
+          </Flex>
           <Button
             as={Link}
             to="/projects"
@@ -75,4 +93,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-

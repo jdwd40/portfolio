@@ -14,8 +14,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<ProjectsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/skillslist" element={<SkillsSection />} />
           {/* Add other routes as needed */}
         </Routes>
