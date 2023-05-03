@@ -7,7 +7,8 @@ const theme = extendTheme({
       brightBlue: '#FFFFFF',
       white: '#FFFFFF',
       orange: '#d76f30',
-      lightGreen: '#6bb77b'
+      lightGreen: '#6bb77b',
+      darkGreen: '#172d13'
     },
   },
   fonts: {

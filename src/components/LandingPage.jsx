@@ -6,14 +6,15 @@ import {
   Text,
   Button,
   VStack,
+  Box,
   useColorModeValue,
   useStyleConfig,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
-  const bg = useColorModeValue('tech.lightBlue', 'tech.lightBlue');
-  const color = useColorModeValue('tech.brightBlue', 'tech.brightBlue');
+  const bg = useColorModeValue('linear(to-br, tech.lightBlue, tech.lightGreen)', 'linear(to-br, tech.lightBlue, tech.lightGreen)');
+  const color = useColorModeValue('tech.white', 'tech.white');
   const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
   const buttonColor = useColorModeValue('tech.white', 'tech.white');
   const textGradientStyle = useStyleConfig('TextGradient');
@@ -21,33 +22,39 @@ const LandingPage = () => {
   return (
     <>
       <Flex
-        direction="column"
         justifyContent="center"
         alignItems="center"
-        bg={bg}
+        bgGradient={bg}
         color={color}
         minHeight="100vh"
         px={{ base: '4', md: '8' }}
+        flexWrap="wrap"
       >
-        <VStack spacing="6" textAlign="center">
-          <Heading as="h1" size="3xl" sx={textGradientStyle}>
+        <VStack
+          spacing="6"
+          textAlign="center"
+          width={{ base: '100%', lg: '50%' }}
+          mb={{ base: '4', lg: '0' }}
+        >
+          <Heading as="h1" size="3xl" sx={textGradientStyle} color='white'>
             John Driscoll's Portfolio
           </Heading>
           <Image
             src="https://jdwd40.com/wp-content/uploads/2023/04/sean-lim-igeKyWQpCY0-unsplash.jpg"
             alt="Landing page"
             maxWidth="100%"
-            width={{ base: '90%', md: '70%', lg: '50%', xl: '40%' }}
+            width={{ base: '90%', md: '70%', lg: '100%', xl: '80%' }}
             mb="4"
             borderRadius="2%"
             borderWidth="2px"
             borderColor={useColorModeValue('gray.300', 'gray.700')}
             shadow="lg"
           />
-          <Text fontSize="lg">
-            I'm John Driscoll, a full-stack web developer specialized in React,
-            Node.js, Express and other modern web technologies.
+          
+          <Text fontSize="xl" color='white'>
+          Hello! I'm John Driscoll, a junior web developer seeking my initial role in the tech industry. I possess a solid foundation in React, Node.js, Express, and Python, and I am eager to apply these skills to web development projects. My prior experience as a bar supervisor and warehouse team leader has equipped me with excellent interpersonal and leadership capabilities. If you are in search of a dedicated and passionate developer to contribute to your team, I am the ideal candidate.
           </Text>
+          
           <Button
             as={Link}
             to="/projects"
@@ -68,3 +75,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+

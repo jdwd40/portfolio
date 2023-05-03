@@ -38,23 +38,24 @@ const projects = [
 ];
 
 const ProjectsPage = () => {
-  const bg = useColorModeValue('tech.lightBlue', 'tech.lightBlue');
-  const color = useColorModeValue('tech.brightBlue', 'tech.brightBlue');
+  const bg = useColorModeValue('linear(to-br, tech.lightBlue, tech.lightGreen)', 'linear(to-br, tech.lightBlue, tech.lightGreen)');
+  const color = useColorModeValue('tech.white', 'tech.white');
   const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
   const buttonColor = useColorModeValue('tech.white', 'tech.white');
   const textGradientStyle = useStyleConfig("TextGradient");
   const cardBg = useColorModeValue('tech.lightGreen', 'tech.LightGreen');
+  const cardColor = useColorModeValue('tech.darkGreen', 'tech.darkGreen');
 
   return (
     <Box
-      bg={bg}
+      bgGradient={bg}
       color={color}
       minHeight="100vh"
-      py="8"
+      py={{ base: '8', md: '16' }}
       px={{ base: '4', md: '8' }}
     >
-      <Heading as="h1" textAlign="center" mb="8" sx={textGradientStyle}>
-        My Projects
+      <Heading as="h1" fontSize="6xl" textAlign="center" mb="8" sx={textGradientStyle}>
+        Projects
       </Heading>
       <Flex justifyContent="center">
         <Stack direction={{ base: 'column', md: 'row' }} spacing="8">
@@ -64,8 +65,11 @@ const ProjectsPage = () => {
               maxW="md"
               borderWidth="1px"
               borderRadius="lg"
+              borderColor={cardColor}
               overflow="hidden"
               padding="4"
+              bg={cardBg}
+              color={cardColor}
             >
               <Image src={project.image}
                 alt={project.title}
@@ -74,7 +78,7 @@ const ProjectsPage = () => {
                 height="200px"
                 objectFit="cover" />
               <VStack p="6" spacing="4" alignItems="start">
-                <Heading as="h2" size="md">
+                <Heading as="h2" size="md" color='white' sx={textGradientStyle}>
                   {project.title}
                 </Heading>
                 <Text
