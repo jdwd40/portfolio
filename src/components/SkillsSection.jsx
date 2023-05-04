@@ -62,7 +62,7 @@ const SkillsSection = () => {
     return (
         <Box bgGradient={bg} minHeight="100vh" py={{ base: '8', md: '16' }} px={{ base: '4', md: '8' }}>
 
-            <Heading as="h2" fontSize="6xl" mb="4" color='white' sx={textGradientStyle} textAlign='center'>
+            <Heading as="h1" fontSize="6xl" mb="4" color='white' sx={textGradientStyle} textAlign='center'>
                 Skills List
             </Heading>
             <Flex

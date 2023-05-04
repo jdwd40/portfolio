@@ -12,6 +12,7 @@ import {
   useColorModeValue,
   useStyleConfig
 } from '@chakra-ui/react';
+import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
@@ -33,7 +34,6 @@ const projects = [
     description: 'Untitled Notes is a online markdown editor. This application was built during the last three weeks of the Northcoders bootcamp. It was built in Nextjs, with Firebase as a backend and TypeScript as the main language. Features include:<br /> <ul style="padding-left: 2rem"><li>Fully operational realtime markdown editor</li><li>Live collaboration sessions with friends</li><li>Responsive design</li><li>Save files in the cloud or locally</li></ul>',
     image: 'https://jdwd40.com/wp-content/uploads/2023/05/splashscreen.png',
     liveLink: 'https://untitled-notes.vercel.app/',
-    githubLink: 'https://github.com/jdwd40/untitled-notes',
   },
 ];
 
@@ -47,14 +47,8 @@ const ProjectsPage = () => {
   const cardColor = useColorModeValue('tech.darkGreen', 'tech.darkGreen');
 
   return (
-    <Box
-      bgGradient={bg}
-      color={color}
-      minHeight="100vh"
-      py={{ base: '8', md: '16' }}
-      px={{ base: '4', md: '8' }}
-    >
-      <Heading as="h1" fontSize="6xl" textAlign="center" mb="8" sx={textGradientStyle}>
+    <Box bgGradient={bg} minHeight="100vh" py={{ base: '8', md: '16' }} px={{ base: '4', md: '8' }}>
+  <Heading as="h1" fontSize="6xl" textAlign="center" mb="8" sx={textGradientStyle} color="white">
         Projects
       </Heading>
       <Flex justifyContent="center">
@@ -94,7 +88,7 @@ const ProjectsPage = () => {
                     </Button>
                   </Link>
                   <Link href={project.githubLink} isExternal>
-                    <Button size="sm" variant="outline" buttonBg="blue" buttonColor={buttonColor}>
+                    <Button size="sm" variant="outline" buttonBg="blue" buttonColor={buttonColor} leftIcon={<FaGithub />}>
                       GitHub
                     </Button>
                   </Link>

@@ -9,8 +9,11 @@ import {
   Box,
   useColorModeValue,
   useStyleConfig,
+  HStack,
+  IconButton
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import { FaWordpress, FaGithub } from 'react-icons/fa';
 
 const LandingPage = () => {
   const bg = useColorModeValue(
@@ -78,19 +81,47 @@ const LandingPage = () => {
               developer to join their ranks.
             </Text>
           </Flex>
-          <Button
-            as={Link}
-            to="/projects"
-            bg={buttonBg}
-            color={buttonColor}
-            size="md"
-            _hover={{
-              bg: 'blue.200',
-              color: 'white',
-            }}
-          >
-            View My Projects
-          </Button>
+          <HStack>
+            <Button
+              as={Link}
+              to="/projects"
+              bg={buttonBg}
+              color={buttonColor}
+              size="md"
+              _hover={{
+                bg: 'blue.200',
+                color: 'white',
+              }}
+            >
+              View My Projects
+            </Button>
+            <Button
+              as="a"
+              href="https://jdwd40.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              leftIcon={<FaWordpress />}
+              size="md"
+              variant="outline"
+              buttonBg="blue"
+              buttonColor={buttonColor}
+            >
+              Visit my blog
+            </Button>
+            <Button
+              as="a"
+              href="https://github.com/jdwd40"
+              target="_blank"
+              rel="noopener noreferrer"
+              leftIcon={<FaGithub />}
+              size="md"
+              variant="outline"
+              buttonBg="blue"
+              buttonColor={buttonColor}
+            >
+              View my Github
+            </Button>
+          </HStack>
         </VStack>
       </Flex>
     </>
