@@ -12,6 +12,7 @@ import {
   FaNetworkWired,
   FaWindows,
   FaLinux,
+  FaGithub,
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -23,7 +24,7 @@ const Footer = () => {
         <Heading color='white' as="h1" size="m" mb="4">
             My Tech Stack
         </Heading>
-      <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} spacing="4">
+      <SimpleGrid columns={{ base: 2, sm: 3, md: 4 }} spacing="1">
         {/* Frontend Development */}
         <Flex alignItems="center">
           <FaReact size="1em" />
@@ -77,8 +78,8 @@ const Footer = () => {
           <Text ml="2">Windows</Text>
         </Flex>
         <Flex alignItems="center">
-          <FaLinux size="1em" />
-          <Text ml="2">Linux</Text>
+          <FaGithub size="1em" />
+          <Text ml="2">Git and Github</Text>
         </Flex>
       </SimpleGrid>
     </Box>
