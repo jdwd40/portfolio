@@ -10,9 +10,11 @@ import {
   Stack,
   Link,
   useColorModeValue,
-  useStyleConfig
+  useStyleConfig,
+  Center
 } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
+import BlogButtons from './BlogButtons';
 
 const projects = [
   {
@@ -42,6 +44,7 @@ const ProjectsPage = () => {
   const textGradientStyle = useStyleConfig("TextGradient");
   const cardBg = useColorModeValue('tech.lightGreen', 'tech.LightGreen');
   const cardColor = useColorModeValue('tech.darkGreen', 'tech.darkGreen');
+  const buttonColor = useColorModeValue('tech.orange', 'tech.orange');
 
   return (
     <Box bgGradient={bg} minHeight="100vh" py={{ base: '8', md: '16' }} px={{ base: '4', md: '8' }}>
@@ -85,7 +88,7 @@ const ProjectsPage = () => {
               />
               <Flex mt="auto" justifyContent="space-between" width="100%">
                 <Link href={project.liveLink} isExternal>
-                  <Button size="sm" bg="blue"
+                  <Button size="sm" bg={buttonColor}
                     color="white">
                     View Live
                   </Button>

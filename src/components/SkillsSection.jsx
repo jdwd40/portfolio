@@ -7,6 +7,7 @@ import {
     VStack,
     useColorModeValue,
     useStyleConfig,
+    Center
 } from '@chakra-ui/react';
 import {
     FaReact,
@@ -21,13 +22,14 @@ import {
     FaWindows,
     FaLinux,
 } from 'react-icons/fa';
+import BlogButtons from './BlogButtons';
 
 const SkillsSection = () => {
     const cardBg = useColorModeValue('tech.lightGreen', 'tech.LightGreen');
     const cardColor = useColorModeValue('tech.darkGreen', 'tech.darkGreen');
     const textGradientStyle = useStyleConfig('TextGradient');
     const bg = useColorModeValue('linear(to-br, tech.lightBlue, tech.lightGreen)', 'linear(to-br, tech.lightBlue, tech.lightGreen)');
-   
+
 
     const skillsList = [
         {
@@ -93,7 +95,7 @@ const SkillsSection = () => {
                         <VStack spacing="4" alignItems="center">
                             {skillGroup.skills.map((skill, index) => (
                                 <Flex key={index} direction="column" alignItems="center" mb="4"
-                                textAlign='center'
+                                    textAlign='center'
                                 >
                                     <skill.icon size="2em" />
                                     <Text color='white' mt="2">{skill.text}</Text>
@@ -104,6 +106,9 @@ const SkillsSection = () => {
                     </Box>
                 ))}
             </Flex>
+            <Center>
+                <BlogButtons />
+            </Center>
         </Box>
     );
 };

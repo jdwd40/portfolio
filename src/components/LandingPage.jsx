@@ -11,19 +11,17 @@ import {
   useStyleConfig,
   HStack
 } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import { FaWordpress, FaGithub } from 'react-icons/fa';
+import BlogButtons from './BlogButtons';
 
 const LandingPage = () => {
   const bg = useColorModeValue(
     'linear(to-br, tech.lightBlue, tech.lightGreen)',
     'linear(to-br, tech.lightBlue, tech.lightGreen)'
   );
-  const color = useColorModeValue('tech.white', 'tech.white');
-  const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
-  const buttonColor = useColorModeValue('tech.white', 'tech.white');
   const textGradientStyle = useStyleConfig('TextGradient');
   const darkGreen = useColorModeValue('tech.darkGreen', 'tech.darkGreen');
+  const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
+  const buttonColor = useColorModeValue('tech.white', 'tech.white');
 
   return (
     <>
@@ -31,7 +29,6 @@ const LandingPage = () => {
         justifyContent="center"
         alignItems="center"
         bgGradient={bg}
-        color={color}
         minHeight="100vh"
         px={{ base: '4', md: '8' }}
         flexWrap="wrap"
@@ -39,8 +36,9 @@ const LandingPage = () => {
         <VStack
           spacing="6"
           textAlign="center"
-          width={{ base: '100%', lg: '50%' }}
+          width={{ base: '100%', lg: '60%' }}
           mb={{ base: '4', lg: '0' }}
+          mx="auto"
         >
           <Heading as="h1" fontSize="6xl" sx={textGradientStyle} color="white">
             About Me
@@ -80,47 +78,7 @@ const LandingPage = () => {
               developer to join their ranks.
             </Text>
           </Flex>
-          <HStack>
-            <Button
-              as={Link}
-              to="/projects"
-              bg={buttonBg}
-              color={buttonColor}
-              size="md"
-              _hover={{
-                bg: 'blue.200',
-                color: 'white',
-              }}
-            >
-              View My Projects
-            </Button>
-            <Button
-              as="a"
-              href="https://jdwd40.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              leftIcon={<FaWordpress />}
-              size="md"
-              variant="outline"
-              buttonBg="blue"
-              buttonColor={buttonColor}
-            >
-              Visit my blog
-            </Button>
-            <Button
-              as="a"
-              href="https://github.com/jdwd40"
-              target="_blank"
-              rel="noopener noreferrer"
-              leftIcon={<FaGithub />}
-              size="md"
-              variant="outline"
-              buttonBg="blue"
-              buttonColor={buttonColor}
-            >
-              View my Github
-            </Button>
-          </HStack>
+          <BlogButtons />
         </VStack>
       </Flex>
     </>
