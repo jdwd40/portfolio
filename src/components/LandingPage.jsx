@@ -9,8 +9,7 @@ import {
   Box,
   useColorModeValue,
   useStyleConfig,
-  HStack,
-  IconButton
+  HStack
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { FaWordpress, FaGithub } from 'react-icons/fa';
@@ -68,7 +67,7 @@ const LandingPage = () => {
             <Text
               fontSize="md"
               color={darkGreen}
-              fontWeight={800}
+              fontWeight={400}
               maxWidth={{ base: '100%', md: '45%', lg: '55%' }}
             >
               Hello! I'm John Driscoll, a junior web developer eager to

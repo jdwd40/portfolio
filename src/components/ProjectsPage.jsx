@@ -39,64 +39,66 @@ const projects = [
 
 const ProjectsPage = () => {
   const bg = useColorModeValue('linear(to-br, tech.lightBlue, tech.lightGreen)', 'linear(to-br, tech.lightBlue, tech.lightGreen)');
-  const color = useColorModeValue('tech.white', 'tech.white');
-  const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
-  const buttonColor = useColorModeValue('tech.white', 'tech.white');
   const textGradientStyle = useStyleConfig("TextGradient");
   const cardBg = useColorModeValue('tech.lightGreen', 'tech.LightGreen');
   const cardColor = useColorModeValue('tech.darkGreen', 'tech.darkGreen');
 
   return (
     <Box bgGradient={bg} minHeight="100vh" py={{ base: '8', md: '16' }} px={{ base: '4', md: '8' }}>
-  <Heading as="h1" fontSize="6xl" textAlign="center" mb="8" sx={textGradientStyle} color="white">
+      <Heading as="h1" fontSize="6xl" textAlign="center" mb="8" sx={textGradientStyle} color="white">
         Projects
       </Heading>
-      <Flex justifyContent="center">
-        <Stack direction={{ base: 'column', md: 'row' }} spacing="8">
-          {projects.map((project, index) => (
-            <Box
-              key={index}
+      <Flex
+        direction={{ base: 'column', sm: 'row' }}
+        justifyContent="center"
+        alignItems="top"
+        flexWrap="wrap"
+      >
+        {projects.map((project, index) => (
+          <Box
+            key={index}
+            width="100%"
+            maxW="md"
+            borderWidth="1px"
+            borderRadius="lg"
+            borderColor={cardColor}
+            overflow="hidden"
+            padding="4"
+            bg={cardBg}
+            color={cardColor}
+            mb="4"
+            mr={{ base: '0', sm: '4' }}
+          >
+            <Image src={project.image}
+              alt={project.title}
+              borderRadius="2%"
               width="100%"
-              maxW="md"
-              borderWidth="1px"
-              borderRadius="lg"
-              borderColor={cardColor}
-              overflow="hidden"
-              padding="4"
-              bg={cardBg}
-              color={cardColor}
-            >
-              <Image src={project.image}
-                alt={project.title}
-                borderRadius="2%"
-                width="100%"
-                height="200px"
-                objectFit="cover" />
-              <VStack p="6" spacing="4" alignItems="start">
-                <Heading as="h2" size="md" color={cardColor} sx={textGradientStyle}>
-                  {project.title}
-                </Heading>
-                <Text
-                  dangerouslySetInnerHTML={{ __html: project.description }}
-                  className="indent-ul"
-                />
-                <Flex mt="auto" justifyContent="space-between" width="100%">
-                  <Link href={project.liveLink} isExternal>
-                    <Button size="sm" bg={buttonBg}
-                      color={buttonColor}>
-                      View Live
-                    </Button>
-                  </Link>
-                  <Link href={project.githubLink} isExternal>
-                    <Button size="sm" variant="outline" buttonBg="blue" buttonColor={buttonColor} leftIcon={<FaGithub />}>
-                      GitHub
-                    </Button>
-                  </Link>
-                </Flex>
-              </VStack>
-            </Box>
-          ))}
-        </Stack>
+              height="200px"
+              objectFit="cover" />
+            <VStack p="6" spacing="4" alignItems="start">
+              <Heading as="h2" size="md" color={cardColor} sx={textGradientStyle}>
+                {project.title}
+              </Heading>
+              <Text
+                dangerouslySetInnerHTML={{ __html: project.description }}
+                className="indent-ul"
+              />
+              <Flex mt="auto" justifyContent="space-between" width="100%">
+                <Link href={project.liveLink} isExternal>
+                  <Button size="sm" bg="blue"
+                    color="white">
+                    View Live
+                  </Button>
+                </Link>
+                <Link href={project.githubLink} isExternal>
+                  <Button size="sm" variant="outline" buttonBg="blue" buttonColor="white" leftIcon={<FaGithub />}>
+                    GitHub
+                  </Button>
+                </Link>
+              </Flex>
+            </VStack>
+          </Box>
+        ))}
       </Flex>
     </Box>
   );
