@@ -36,6 +36,7 @@ const projects = [
     description: 'Untitled Notes is a online markdown editor. This application was built during the last three weeks of the Northcoders bootcamp. It was built in Nextjs, with Firebase as a backend and TypeScript as the main language. Features include:<br /> <ul style="padding-left: 2rem"><li>Fully operational realtime markdown editor</li><li>Live collaboration sessions with friends</li><li>Responsive design</li><li>Save files in the cloud or locally</li></ul>',
     image: 'https://jdwd40.com/wp-content/uploads/2023/05/splashscreen.png',
     liveLink: 'https://untitled-notes.vercel.app/',
+    githubLink: 'https://github.com/jdwd40/untitled-notes',
   },
 ];
 
