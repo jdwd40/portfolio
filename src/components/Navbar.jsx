@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Link, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, Link, useColorModeValue, Text } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -18,9 +18,9 @@ const Navbar = () => {
       zIndex={10}
     >
       <Flex alignItems="center" justifyContent="center">
-        <Link as={RouterLink} to="/" fontWeight="bold" fontSize="sm" mx={4}>
-          John Driscoll Portfolio
-        </Link>
+       
+          <Text as='b' >John Driscoll Portfolio</Text>
+        
         <Link as={RouterLink} to="/projects" fontSize="sm" mx={4} fontWeight="bold">
           Projects
         </Link>

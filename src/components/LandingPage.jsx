@@ -4,12 +4,10 @@ import {
   Flex,
   Heading,
   Text,
-  Button,
   VStack,
   Box,
   useColorModeValue,
-  useStyleConfig,
-  HStack
+  useStyleConfig
 } from '@chakra-ui/react';
 import BlogButtons from './BlogButtons';
 
@@ -20,8 +18,6 @@ const LandingPage = () => {
   );
   const textGradientStyle = useStyleConfig('TextGradient');
   const darkGreen = useColorModeValue('tech.darkGreen', 'tech.darkGreen');
-  const buttonBg = useColorModeValue('tech.orange', 'tech.orange');
-  const buttonColor = useColorModeValue('tech.white', 'tech.white');
 
   return (
     <>
@@ -31,12 +27,11 @@ const LandingPage = () => {
         bgGradient={bg}
         minHeight="100vh"
         px={{ base: '4', md: '8' }}
-        flexWrap="wrap"
       >
         <VStack
           spacing="6"
           textAlign="center"
-          width={{ base: '100%', lg: '60%' }}
+          width={{ base: '100%', lg: '80%' }}
           mb={{ base: '4', lg: '0' }}
           mx="auto"
         >
@@ -45,16 +40,16 @@ const LandingPage = () => {
           </Heading>
           <Flex
             direction={{ base: 'column', md: 'row' }}
-            alignItems={{ base: 'center', md: 'flex-start' }}
-            justifyContent={{ base: 'center', md: 'space-between' }}
-            spacing={{ base: '6', md: '10' }}
+            alignItems="center"
+            justifyContent="space-between"
+            spacing={{ base: '6', md: '12' }}
             width="100%"
           >
             <Box>
               <Image
-                src="https://jdwd40.com/wp-content/uploads/2023/05/jd2023.jpg"
+                src="profile_pic.jpg"
                 alt="Profile picture"
-                width={{ base: '250px', md: '250px', lg: '250px' }}
+                width={{ base: '150px', md: '200px', lg: '200px' }}
                 mb={{ base: '4', md: '0' }}
                 borderRadius="full"
                 borderWidth="2px"
@@ -62,21 +57,14 @@ const LandingPage = () => {
                 shadow="lg"
               />
             </Box>
-            <Text
-              fontSize="md"
-              color={darkGreen}
-              fontWeight={400}
-              maxWidth={{ base: '100%', md: '45%', lg: '55%' }}
+            <Box
+              maxWidth={{ base: '100%', md: '60%' }}
+              textAlign={{ base: 'center', md: 'left' }}
             >
-              Hello! I'm John Driscoll, a junior web developer eager to
-              kickstart my career in the tech industry. With a strong foundation
-              in React, Node.js, Express, and Python, I am well-prepared to
-              contribute to diverse web development projects. My ability to
-              learn quickly and adapt to new technologies, alongside my
-              dedication to writing clean, efficient code, makes me an excellent
-              candidate for any team looking for a passionate and committed
-              developer to join their ranks.
-            </Text>
+              <Text fontSize="md" color={darkGreen} fontWeight={500} fontStyle='italic'>
+                Hello, I'm John Driscoll. My career began in a warehouse before transitioning into tech support, highlighting my adaptability. A period of redundancy led me to a role as a delivery driver, which presented its own set of challenges and learning opportunities. During a tough time when both I and my mother fell ill, I took on caregiving responsibilities while continuing to advance my web development skills. Now, I'm at a pivotal moment in my career, actively looking for opportunities to leverage my diverse skill set in web development.
+              </Text>
+            </Box>
           </Flex>
           <BlogButtons />
         </VStack>
