@@ -41,11 +41,11 @@ const LandingPage = () => {
           <Flex
             direction={{ base: 'column', md: 'row' }}
             alignItems="center"
-            justifyContent="space-between"
+            justifyContent={{ base: 'center', md: 'flex-start' }}  // Changed this line
             spacing={{ base: '6', md: '12' }}
             width="100%"
           >
-            <Box>
+            <Box mr={{ md: '4', lg: '8' }}> 
               <Image
                 src="profile_pic.jpg"
                 alt="Profile picture"
